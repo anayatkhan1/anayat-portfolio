@@ -1,0 +1,50 @@
+---
+import { RiArrowRightUpLine } from "react-icons/ri";
+
+interface Props {
+	testimonial: {
+		feedback: string;
+		name: string;
+		designation: string;
+		company: string;
+		image: string;
+		profile: string;
+	};
+	size?: "small" | "large";
+}
+
+const { testimonial, size = "small" } = Astro.props;
+const isLarge = size === "large";
+---
+
+<div class={`group md:hover:bg-hoverColor/50 relative h-full transform rounded-lg border-body/20 border border-dotted  p-3.5 transition-all duration-300 ease-in-out md:hover:scale-[1.02] md:hover:border-primary/40 ${isLarge ? "md:col-span-2" : ""}`}>
+	<div class="flex h-full flex-col justify-between gap-3">
+		<p class={`text-body leading-snug ${isLarge ? "text-sm" : "text-[13px]"} mb-0`}>
+			{testimonial.feedback}
+		</p>
+		<div class="flex items-center gap-2.5">
+			<img
+				src={testimonial.image}
+				alt={testimonial.name}
+				class={`rounded-full border border-body/20 object-cover transition-all duration-300 md:group-hover:border-primary/40 ${isLarge ? "h-10 w-10" : "h-9 w-9"}`}
+			/>
+			<div class="flex flex-col flex-1 min-w-0">
+				{testimonial.profile !== "#" ? (
+					<a
+						href={testimonial.profile}
+						target="_blank"
+						rel="noopener noreferrer"
+						class="group/link text-title md:group-hover:text-primary text-xs font-medium tracking-tight transition-colors duration-150 ease-in-out md:group-hover:underline truncate">
+						{testimonial.name}
+						<RiArrowRightUpLine className="ml-0.5 inline-block opacity-0 transition-opacity duration-150 md:group-hover/link:opacity-100" />
+					</a>
+				) : (
+					<h3 class="text-title text-xs font-medium tracking-tight truncate">{testimonial.name}</h3>
+				)}
+				<p class="text-body text-[10px] tracking-tight truncate">
+					{testimonial.designation} • {testimonial.company}
+				</p>
+			</div>
+		</div>
+	</div>
+</div>

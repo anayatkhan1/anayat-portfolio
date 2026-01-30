@@ -1,0 +1,49 @@
+[
+	{
+		"id": 2,
+		"name": "github",
+		"url": "https://github.com/anayatkhan1",
+		"target": "_blank",
+		"icon": "github"
+	},
+	{
+		"id": 1,
+		"name": "linkedin",
+		"url": "https://www.linkedin.com/in/anayatkhan/",
+		"target": "_blank",
+		"icon": "linkedin"
+	},
+
+	{
+		"id": 3,
+		"name": "twitter",
+		"url": "https://x.com/anayatkhan09",
+		"target": "_blank",
+		"icon": "twitter"
+	},
+	{
+		"id": 6,
+		"name": "discord",
+		"url": "https://discord.com/users/784060394964647936",
+		"target": "_blank",
+		"icon": "discord"
+	},
+	{
+		"id": 4,
+		"name": "email",
+		"url": "mailto:anayat0khan@gmail.com",
+		"target": "_blank",
+		"icon": "email"
+	},
+	{
+		"id": 5,
+		"name": "resume",
+		"url": "/resume",
+		"target": "_self",
+		"icon": "resume"
+	}
+
+]
+
+
+

@@ -1,0 +1,79 @@
+[
+	{
+		"id": 1,
+		"organization": "PSci Labs",
+		"role": "AI Engineer",
+		"logo": "/public/companies/psci.png",
+		"startDate": "May, 2025",
+		"endDate": "Nov, 2025",
+		"location": "USA - Remote",
+		"responsibilities": [
+			"Built React components to render citation context in AI-generated Word and PDF documents, improving document review speed by ~30% for client workflows.",
+			"Developed an AI agent to generate and edit PowerPoint presentations, reducing manual slide creation time by 50%",
+			"Improved chat UI by adding slash commands (e.g. /fix) and @ file include, and integrated TipTap for rich editing, delivering a smoother, more capable chat experience."
+		],
+		"technologies": ["AI", "Live Streaming", "Translation", "Analytics", "Dashboard", "UI/UX"]
+	},
+	
+	{
+		"id": 1,
+		"organization": "Vincera AI",
+		"role": "AI Engineer",
+		"logo": "/public/companies/vincera.png",
+		"startDate": "Jan, 2025",
+		"endDate": "May, 2025",
+		"location": "Romania - Remote",
+		"responsibilities": [
+			"Designed and shipped a multi-agent AI system with a director agent orchestrating sales, promotions, and executive workflows via Telegram, WhatsApp, and email.",
+			"Built AI agents for Excel sales analytics, PDF promo extraction, and Gmail/Calendar task prioritization, cutting manual reporting and follow-ups by 50%",
+			"Delivered a production-ready automation stack using n8n, Supabase, and secure APIs, with modular workflows and client handoff."
+		],
+		"technologies": ["AI", "Live Streaming", "Translation", "Analytics", "Dashboard", "UI/UX"]
+	},
+	{
+		"id": 2,
+		"organization": "Kingdom Global Ventures",
+		"role": "Full Stack Engineer",
+		"logo": "/public/companies/venture.png",
+		"startDate": "Oct, 2024",
+		"endDate": "Present",
+		"location": "Canada - Remote",
+		"responsibilities": [
+			"Engineered event platform with AI live-streaming, 100+ language translation, serving 10K+ users",
+			"Launched AI-powered notes/highlights boosting user session duration by 25% via live-caption interactivity",
+			"Built scalable dashboard & UI/UX for event analytics, slashing onboarding time by 40% for enterprises"
+		],
+		"technologies": ["AI", "Live Streaming", "Translation", "Analytics", "Dashboard", "UI/UX"]
+	},
+
+	{
+		"id": 3,
+		"organization": "Memorang",
+		"role": "Software Engineer",
+		"logo": "/public/companies/memorang.png",
+		"startDate": "May, 2024",
+		"endDate": "Sep, 2024",
+		"location": "USA - Remote",
+		"responsibilities": [
+			"Refactored UI components to enhance user experience, resulting in a 25% increase in user satisfaction",
+			"Collaborated with cross-functional teams to leverage Supabase AI vector embedding for improved search accuracy by 30%",
+			"Designed and implemented a REST API using Prisma, resulting in a 56% increase in deployment speed"
+		],
+		"technologies": ["React", "Supabase", "Prisma", "REST API", "AI", "Vector Embeddings"]
+	},
+	{
+		"id": 4,
+		"organization": "OneHeadlight",
+		"role": "Front End Engineer",
+		"logo": "",
+		"startDate": "Jul, 2023",
+		"endDate": "Jan, 2024",
+		"location": "USA - Remote",
+		"responsibilities": [
+			"Developed 9+ reusable React components, enhancing UI efficiency by 30% and reducing development time",
+			"Crafted pixel-perfect UIs across features, ensuring 100% brand compliance and enhancing UX",
+			"Achieved 95% code coverage through Test-Driven Development (TDD), reducing post-release bugs by 40%"
+		],
+		"technologies": ["React", "TDD", "Testing", "UI Components", "UX Design"]
+	}
+]

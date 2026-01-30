@@ -1,0 +1,76 @@
+---
+title: "Prompt Caching Simulation"
+date: 2026-01-29
+excerpt: "Simulating prompt caching with js-tiktoken and GPT-4o tokenizer."
+---
+
+A minimal example of **prompt caching** in LLMs using TypeScript and [js-tiktoken](https://github.com/dqbd/tiktoken). It simulates how providers reuse cached tokens when a prompt shares a common prefix with a previous request, using the **o200k_base** encoding (GPT-4o).
+
+## Setup
+
+```bash
+npm install js-tiktoken
+```
+
+## Example
+
+```typescript
+import { Tiktoken } from 'js-tiktoken/lite';
+import o200k_base from 'js-tiktoken/ranks/o200k_base';
+import { styleText } from 'util';
+
+const tokenizer = new Tiktoken(o200k_base);
+
+const tokenize = (text: string) => tokenizer.encode(text);
+
+// Previously cached prompt
+const tokensInCache = tokenize(
+  `On the edge of a violet nebula drifts Aeloria, an imaginary planet where gravity hums softly and the sky shifts color with the planet's mood.`,
+);
+
+// New input (same prefix + more text)
+const inputTokens = tokenize(
+  `On the edge of a violet nebula drifts Aeloria, an imaginary planet where gravity hums softly and the sky shifts color with the planet's mood. What a story`,
+);
+
+let numberOfMatchingTokens = 0;
+for (let i = 0; i < inputTokens.length; i++) {
+  if (inputTokens[i] === tokensInCache[i]) {
+    numberOfMatchingTokens++;
+  } else {
+    break;
+  }
+}
+
+const cachedTokens = tokensInCache.slice(0, numberOfMatchingTokens);
+const uncachedTokens = inputTokens.slice(numberOfMatchingTokens);
+
+const cachedText = tokenizer.decode(cachedTokens);
+const uncachedText = tokenizer.decode(uncachedTokens);
+
+console.log('Cached tokens:', cachedTokens.length);
+console.log(
+  styleText(['bold', 'green'], cachedText) + styleText(['red'], uncachedText),
+);
+```
+
+## How It Works
+
+1. **Tokenizer**: Initialize with `o200k_base` (GPT-4o).
+2. **Mock cache**: `tokensInCache` is a previously processed prompt.
+3. **Prefix match**: Loop over `inputTokens` and count how many tokens match the cache from the start.
+4. **Split**: Cached = matching prefix; uncached = the rest. Decode and print (green = cached, red = new).
+
+This illustrates how providers reduce latency and cost by reusing token prefixes.
+
+## Run
+
+```bash
+npm start
+```
+
+Example output: cached token count, then the text with the shared prefix in green and the new part in red.
+
+## Resources
+
+- [js-tiktoken](https://github.com/dqbd/tiktoken)

@@ -1,0 +1,124 @@
+---
+title: "Evaluating LLMs with Evalite"
+date: 2026-01-29
+excerpt: "Evaluating LLM outputs with Evalite and Vercel AI SDK."
+---
+
+When building production AI systems, evaluating model performance is crucial. [Evalite](https://evalite.dev) provides a focused way to evaluate LLM outputs with real-time feedback, while the [Vercel AI SDK](https://sdk.vercel.ai/) makes it easy to generate text from various providers.
+
+## Setup
+
+Install dependencies:
+
+```bash
+npm install @ai-sdk/anthropic ai evalite
+```
+
+Add your API key to `.env`:
+
+```env
+ANTHROPIC_API_KEY=your_key_here
+```
+
+## Example: Country Capitals
+
+Here's a complete example that evaluates an LLM's ability to answer questions about country capitals:
+
+```typescript
+import { anthropic } from '@ai-sdk/anthropic';
+import { generateText } from 'ai';
+import { evalite } from 'evalite';
+
+evalite('Capitals', {
+  data: () => [
+    {
+      input: 'What is the capital of France?',
+      expected: 'Paris',
+    },
+    {
+      input: 'What is the capital of Germany?',
+      expected: 'Berlin',
+    },
+    {
+      input: 'What is the capital of Italy?',
+      expected: 'Rome',
+    },
+  ],
+  
+  task: async (input) => {
+    const capitalResult = await generateText({
+      model: anthropic('claude-3-5-haiku-20241022'),
+      prompt: `
+        You are a helpful assistant that can answer questions about the capital of countries.
+
+        <question>
+        ${input}
+        </question>
+
+        Answer the question.
+        Reply only with the capital of the country.
+      `,
+    });
+
+    return capitalResult.text;
+  },
+  
+  scorers: [
+    {
+      name: 'includes',
+      scorer: ({ input, output, expected }) => {
+        return output.includes(expected!) ? 1 : 0;
+      },
+    },
+  ],
+});
+```
+
+## Components
+
+**Data**: Array of test cases with `input` and `expected` values.
+
+**Task**: Async function that calls the LLM and returns the generated text.
+
+**Scorers**: Custom functions that evaluate output quality. The example checks if the output includes the expected answer.
+
+## Running
+
+```bash
+npm run eval:dev
+```
+
+This starts the Evalite runner with real-time results showing pass/fail status, scores, and performance metrics.
+
+## Extending
+
+**Multiple Scorers:**
+```typescript
+scorers: [
+  {
+    name: 'includes',
+    scorer: ({ output, expected }) => output.includes(expected!) ? 1 : 0,
+  },
+  {
+    name: 'exact_match',
+    scorer: ({ output, expected }) => output.trim() === expected ? 1 : 0,
+  },
+],
+```
+
+**Dynamic Data:**
+```typescript
+data: async () => {
+  const countries = await fetchCountriesFromAPI();
+  return countries.map(country => ({
+    input: `What is the capital of ${country.name}?`,
+    expected: country.capital,
+  }));
+},
+```
+
+## Resources
+
+- [Evalite Documentation](https://evalite.dev)
+- [Vercel AI SDK Documentation](https://sdk.vercel.ai/)
+- [Anthropic API Documentation](https://docs.anthropic.com/)

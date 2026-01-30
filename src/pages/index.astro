@@ -1,0 +1,113 @@
+---
+import Layout from "../layouts/Layout.astro";
+import { Icon } from "astro-icon/components";
+import { RiArrowRightUpLine } from "react-icons/ri";
+import projectsData from "../constants/projects.json";
+import socialsData from "../constants/socials.json";
+import experiencesData from "../constants/experiences.json";
+import testimonialsData from "../constants/testimonials.json";
+import ProjectCard from "../components/ProjectCard.astro";
+import ExperienceCard from "../components/react/ExperienceCard.tsx";
+import TestimonialCard from "../components/TestimonialCard.astro";
+import { PiLightbulbFill } from "react-icons/pi";
+
+const projects = projectsData;
+const socials = socialsData;
+const experiences = experiencesData;
+const testimonials = testimonialsData;
+---
+
+<Layout title="Anayat Khan">
+	<h1 class="text-primary font-serif text-[2.5rem] tracking-tight">Anayat Khan</h1>
+	<div class="flex items-center gap-1.5 font-medium tracking-tight">
+		<h2 class="text-title text-base">AI Engineer</h2>
+		<div class="bg-title mt-1.5 h-1 w-1 rounded"></div>
+		<h2 class="text-title text-base">Software Engineer</h2>
+		
+		
+	</div>
+
+	<p class="bio pt-4 text-sm">
+		Hi there, I'm Anayat, an <span class="text-black">AI Engineer</span> who builds <span class="text-black">production-ready AI agents</span> and <span class="text-black">multi-agent systems</span> that automate complex workflows. I specialize in designing <span class="text-black">agentic AI systems</span> that orchestrate sales, analytics, and document generation, cutting manual work by 30-50%. When I'm not shipping AI agents, I'm building tools like <span class="text-black">AgentKit</span> and <span class="text-black">Fuzora</span> to help others build faster.
+	</p>
+
+	<div class="socials grid w-fit grid-cols-3 gap-2 pt-4 tracking-tight md:flex md:flex-row md:items-start">
+		{
+			socials.map((social) => (
+				<a
+					href={social.url}
+					target={social.target}
+					rel={social.target === "_blank" ? "noopener noreferrer" : undefined}
+					class="group md:hover:text-primary flex items-center underline-offset-4 transition duration-150 ease-in-out md:hover:underline">
+					<Icon name={social.icon} size={14} class="mr-1.5" />
+					<span class="text-sm">{social.name}</span>
+					<RiArrowRightUpLine className="opacity-0 transition-opacity duration-150 md:group-hover:opacity-100" />
+				</a>
+			))
+		}
+	</div>
+
+	<section class="pt-8">
+		<h2 class="text-title font-medium tracking-tight">Experience</h2>
+		<div class="pt-1.5">
+			{experiences.map((experience) => (
+				<ExperienceCard experience={experience} client:load />
+			))}
+		</div>
+	</section>
+
+	<section class="pt-8">
+		<h2 class="text-title font-medium tracking-tight">Projects</h2>
+		<div class="pt-1.5">
+			{projects.map((project) => <ProjectCard project={project} />)}
+		</div>
+		<div class="group">
+			<p
+				class="border-body/20 bg-hoverColor/60 text-body mt-4 w-fit rounded-md border px-2 py-1 text-xs transition-all duration-300 ease-in-out">
+				<PiLightbulbFill
+					className="md:group-hover:text-primary -mt-0.5 inline-block transition-all duration-300 ease-in-out"
+				/>
+				Feel free to explore my
+				<a
+					href="https://github.com/anayatkhan1?tab=repositories"
+					rel="noopenner noreferrer"
+					target="_blank"
+					class="text-body md:hover:text-primary md:group-hover:text-primary font-medium underline underline-offset-2 transition-all duration-150 ease-in-out"
+					>GitHub</a
+				> for more projects. Most of them are open-source.
+			</p>
+		</div>
+	</section>
+
+	<section class="pt-8">
+		<h2 class="text-title font-medium tracking-tight">Workflow</h2>
+		<div class="pt-1.5">
+			<img
+				src="/workflow/workflow_mobile.svg"
+				alt="Development workflow diagram showing the process from idea to deployment"
+				class="block w-full h-96 md:hidden"
+			/>
+			<img
+				src="/workflow/workflow.svg"
+				alt="Development workflow diagram showing the process from idea to deployment"
+				class="hidden w-full h-auto md:block"
+			/>
+		</div>
+	</section>
+
+	<section class="pt-8">
+		<h2 class="text-title font-medium tracking-tight">Testimonials</h2>
+		<div class="pt-1.5">
+			<div class="grid grid-cols-1 gap-2.5 md:grid-cols-2 md:auto-rows-fr">
+				<TestimonialCard testimonial={testimonials[0]} size="small" />
+				<TestimonialCard testimonial={testimonials[1]} size="small" />
+				<TestimonialCard testimonial={testimonials[2]} size="small" />
+				<TestimonialCard testimonial={testimonials[3]} size="small" />
+			</div>
+		</div>
+	</section>
+
+	<div class="flex w-full flex-col items-center justify-center pt-8">
+		<Icon name="signature" width={150} height={60} />
+	</div>
+</Layout>

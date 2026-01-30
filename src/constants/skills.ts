@@ -1,0 +1,82 @@
+export const skillsByCategory = [
+	{
+		category: "Languages",
+		items: ["JavaScript", "TypeScript", "Python"],
+	},
+	{
+		category: "Frontend",
+		items: [
+			"Tailwind CSS",
+			"React",
+			"Next.js",
+			"Clerk",
+			"Shadcn UI",
+			"Magic UI",
+			"Material UI",
+			"Framer",
+			"Recoil",
+			"Zustand",
+			"React Query",
+			"Zod",
+		],
+	},
+	{
+		category: "Backend",
+		items: ["PostgreSQL", "Neon", "Supabase", "REST", "GraphQL", "Prisma"],
+	},
+	{
+		category: "AI",
+		items: [
+			"OpenAI",
+			"Claude",
+			"Evals",
+			"Agents",
+			"Multi-agent Systems",
+			"Vector Embeddings",
+			"HuggingFace",
+			"Fine-Tuning",
+			"Mistral",
+			"Ollama",
+			"Vercel AI SDK",
+		],
+	},
+	{
+		category: "Testing",
+		items: [
+			"Postman",
+			"Jest",
+			"Vitest",
+			"Cypress",
+			"Playwright",
+			"Ngrok",
+		],
+	},
+	{
+		category: "Tools",
+		items: [
+			"Git",
+			"Figma",
+			"Docker",
+			"AWS Amplify",
+			"Vercel",
+			"Linear",
+			"Jira",
+			"Notion",
+			"n8n",
+		],
+	},
+
+	{
+		category: "Methodologies",
+		items: [
+			"Agile Development",
+			"TDD",
+			"DevOps",
+			"CI/CD",
+			"MLOps",
+			"System Design",
+			"Code Review",
+			"Iterative Development",
+		],
+	},
+] as const;

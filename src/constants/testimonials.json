@@ -1,0 +1,34 @@
+[
+	{
+		"feedback": "Working with Anayat transformed how we handle document workflows. The citation components he built cut our review time by 30%, and the AI PowerPoint agent saves our team hours every week. We're creating slides 50% faster now.",
+		"name": "Blaize Berry",
+		"designation": "CTO",
+		"company": "PSci Labs",
+		"image": "/clients/blaize.png",
+		"profile": "#"
+	},
+	{
+		"feedback": "We were drowning in manual sales reporting until Anayat built our multi-agent system. It now handles Excel analytics, promo extraction, and task prioritization automatically, cutting our manual work in half.",
+		"name": "Trifon Raykov",
+		"designation": "Founder",
+		"company": "Vincera AI",
+		"image": "/clients/trifon.png",
+		"profile": "#"
+	},
+	{
+		"feedback": "Anayat built our event platform from the ground up, and it's now serving 10K+ users globally. The AI-powered features he added increased user engagement by 25% and made enterprise onboarding 40% faster.",
+		"name": "Icaro Oliveira",
+		"designation": "Founder",
+		"company": "Kingdom Global Ventures",
+		"image": "/clients/icaro.png",
+		"profile": "#"
+	},
+	{
+		"feedback": "His attention to quality is unmatched. The reusable component library he created improved our development speed by 30%, and with 95% test coverage, we've seen 40% fewer bugs in production.",
+		"name": "Ven Vadlamani",
+		"designation": "CEO",
+		"company": "OneHeadlight",
+		"image": "/clients/ven.png",
+		"profile": "#"
+	}
+]
