@@ -1,4 +1,3 @@
-# anayat.xyz
 
 A minimal personal portfolio for Anayat Khan—AI Engineer & Software Engineer. Experience, projects, blog (thoughts), resume, and an AI chat to get to know more. Built with Astro, React, and Tailwind.
 
@@ -15,9 +14,14 @@ A minimal personal portfolio for Anayat Khan—AI Engineer & Software Engineer. 
 
 ## Built with
 
-- [Astro](https://astro.build/) · [React](https://react.dev/) · [TypeScript](https://www.typescriptlang.org/)
-- [Tailwind CSS](https://tailwindcss.com/) · [Vercel AI SDK](https://sdk.vercel.ai/) · [MDX](https://mdxjs.com/)
-- [Cal.com](https://cal.com/) (scheduling) · [Vercel](https://vercel.com/) (hosting)
+- [Astro](https://astro.build/) 
+- [React](https://react.dev/)
+- [TypeScript](https://www.typescriptlang.org/)
+- [Tailwind CSS](https://tailwindcss.com/)
+- [Vercel AI SDK](https://sdk.vercel.ai/)
+- [MDX](https://mdxjs.com/)
+- [Cal.com](https://cal.com/) (scheduling)
+- [Vercel](https://vercel.com/) (hosting)
 
 ## Getting started
 
@@ -31,6 +35,18 @@ bun run dev
 ```
 
 Open [http://localhost:4321](http://localhost:4321).
+
+## Environment Variables
+
+To run the project locally, you need to set up the following environment variables. Create a `.env.local` or `.env` file in the root directory of the project:
+
+```env
+# Anthropic AI
+ANTHROPIC_API_KEY=your_anthropic_api_key
+
+#  Production URL
+SITE=your_site_link
+```
 
 ## License
 
