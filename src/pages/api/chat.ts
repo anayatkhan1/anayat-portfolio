@@ -31,7 +31,7 @@ export const POST: APIRoute = async ({ request }) => {
 		}
 
 		const result = streamText({
-			model: anthropic("claude-3-5-haiku-20241022"),
+			model: anthropic("claude-sonnet-4-5-20250929"),
 			system: aboutMe(),
 			temperature: 0.5,
 			messages: convertToCoreMessages(messages),
