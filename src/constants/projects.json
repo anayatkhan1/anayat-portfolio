@@ -1,30 +1,30 @@
 [
 	{
 		"id": 1,
+		"title": "AgentCN",
+		"description": "Open-source CLI and registry for installable AI agents",
+		"link": "https://agentcn.dev",
+		"github": "https://github.com/anayatkhan1/kit"
+	},
+	{
+		"id": 2,
 		"title": "AgentKit",
-		"description": "Build production-ready AI agents, fast",
+		"description": "Production-ready starter to ship AI chat apps with web search",
 		"link": "https://agentkitt.xyz",
 		"github": "https://github.com/anayatkhan1/agentkit-starter"
 	},
 	{
-		"id": 2,
-		"title": "Writora AI",
-		"description": "Convert video and audio into blogs",
-		"link": "https://writora.xyz",
-		"github": "https://github.com/anayatkhan1/Writora-AI"
-	},
-	{
 		"id": 3,
 		"title": "Vercel AI SDK Lab",
-		"description": "Hands-on experiments with AI agents, evals, and AISDK patterns",
+		"description": "Open-source patterns for building and evaluating AI agents",
 		"link": "https://github.com/agentcn-kit/ai-sdk-lab",
 		"github": "https://github.com/agentcn-kit/ai-sdk-lab"
 	},
 	{
 		"id": 4,
-		"title": "Fuzora",
-		"description": "Automate workflows by connecting your favorite tools",
-		"link": "https://fuzora.xyz",
-		"github": "https://github.com/anayatkhan1/Fuzora"
+		"title": "Writora AI",
+		"description": "Convert video and audio into blogs",
+		"link": "https://writora.xyz",
+		"github": "https://github.com/anayatkhan1/Writora-AI"
 	}
 ]
