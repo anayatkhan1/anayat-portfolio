@@ -1,6 +1,20 @@
 [
 	{
 		"id": 1,
+		"organization": "EY Studio+",
+		"role": "Software Engineer",
+		"logo": "/companies/ey.png",
+		"startDate": "April, 2026",
+		"endDate": "Present",
+		"location": "Canada - Remote",
+		"responsibilities": [
+			"Built server-driven UI architecture from scratch for an MVP, enabling dynamic rendering of application interfaces and a scalable foundation for continued product development.",
+			"Developed authentication, admin dashboard, and organization-level dynamic theming, enabling customizable experiences across organizations."
+		],
+		"technologies": ["Server-Driven UI", "Authentication", "Admin Dashboard", "Multi-tenancy", "Theming"]
+	},
+	{
+		"id": 2,
 		"organization": "PSci Labs",
 		"role": "AI Engineer",
 		"logo": "/companies/psci.png",
@@ -16,7 +30,7 @@
 	},
 	
 	{
-		"id": 1,
+		"id": 3,
 		"organization": "Vincera AI",
 		"role": "AI Engineer",
 		"logo": "/companies/vincera.png",
@@ -31,12 +45,12 @@
 		"technologies": ["AI", "Live Streaming", "Translation", "Analytics", "Dashboard", "UI/UX"]
 	},
 	{
-		"id": 2,
+		"id": 4,
 		"organization": "Kingdom Global Ventures",
 		"role": "Full Stack Engineer",
 		"logo": "/companies/venture.png",
 		"startDate": "Oct, 2024",
-		"endDate": "Present",
+		"endDate": "March, 2026",
 		"location": "Canada - Remote",
 		"responsibilities": [
 			"Engineered event platform with AI live-streaming, 100+ language translation, serving 10K+ users",
@@ -47,7 +61,7 @@
 	},
 
 	{
-		"id": 3,
+		"id": 5,
 		"organization": "Memorang",
 		"role": "Software Engineer",
 		"logo": "/companies/memorang.png",
@@ -62,7 +76,7 @@
 		"technologies": ["React", "Supabase", "Prisma", "REST API", "AI", "Vector Embeddings"]
 	},
 	{
-		"id": 4,
+		"id": 6,
 		"organization": "OneHeadlight",
 		"role": "Front End Engineer",
 		"logo": "",
