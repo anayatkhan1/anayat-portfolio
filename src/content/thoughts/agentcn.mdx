@@ -1,0 +1,92 @@
+---
+title: "Installable AI Agents with AgentCN"
+date: 2026-08-21
+excerpt: "An open-source CLI to install AI agents as editable TypeScript in your stack."
+---
+
+Most AI kits ship opaque SDKs. You call an API, get a response, and hope the abstraction holds up when you need to change prompts, tools, or model settings. [AgentCN](https://agentcn.dev) takes a different approach: install agents like components, with real TypeScript source you can edit and own.
+
+## Why I built it
+
+When shipping AI agents in production, I kept hitting the same wall. Frameworks were great for demos, but customization meant fighting the SDK or forking internals. I wanted something closer to how we use UI libraries: run a command, get source in your repo, change what you need.
+
+AgentCN is an open-source kit with a CLI, hosted registry, and agents built on the [Vercel AI SDK](https://sdk.vercel.ai/).
+
+## Quick start
+
+Install the web agent into any project:
+
+```bash
+npx agentcn@latest add web-agent
+```
+
+List what's available:
+
+```bash
+npx agentcn@latest list
+```
+
+Preview files before installing:
+
+```bash
+npx agentcn@latest add web-agent --dry-run
+```
+
+After install, agent source lands in your repo (typically under `ai/agents/`). Prompts, tools, and runtime are plain TypeScript you can change directly.
+
+## How it works
+
+1. **Registry**: Agent manifests live at [agentcn.dev/r](https://agentcn.dev/r). The CLI reads them and pulls the right files into your project.
+2. **CLI install**: `npx agentcn add <agent>` copies source, not a black-box dependency.
+3. **Editable source**: You own the code. Swap models, tweak prompts, add tools without waiting on a library update.
+4. **Docs + demos**: Setup guides and previews live at [agentcn.dev/docs](https://agentcn.dev/docs).
+
+## Available agents
+
+Run `npx agentcn@latest list` for the full set. Current agents include:
+
+- **Web Agent** — browser automation, web search, deep research, and Q&A
+- **Extraction Agent** — structured data extraction from documents
+- **Ecommerce Agent** — product and catalog workflows
+
+Each agent has its own docs page with wiring examples and required API keys.
+
+## Example: calling an agent
+
+After installing the web agent, import from the generated path in your app:
+
+```typescript
+import { webAgent } from '@/ai/agents/web';
+
+const result = await webAgent.generate({
+  prompt: 'What are the latest updates on the Vercel AI SDK?',
+});
+```
+
+The exact import path depends on your project setup. Full guides are in the [Web Agent docs](https://agentcn.dev/docs/agents/web-agent).
+
+## Environment variables
+
+Most agents need an Anthropic API key:
+
+```env
+ANTHROPIC_API_KEY=your_key_here
+```
+
+The web agent also needs search and browser keys:
+
+```env
+EXA_API_KEY=your_exa_key
+ANCHOR_API_KEY=your_anchor_key
+```
+
+## What's next
+
+AgentCN is early but growing. The registry, CLI, and docs site are all open source. If you're building with AI agents and want source you can actually change, give it a try.
+
+## Resources
+
+- [AgentCN Docs](https://agentcn.dev/docs)
+- [Agent Registry](https://agentcn.dev/r)
+- [npm package](https://www.npmjs.com/package/agentcn)
+- [GitHub](https://github.com/anayatkhan1/kit)
