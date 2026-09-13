@@ -1,5 +1,22 @@
 export const skillsByCategory = [
 	{
+		category: "AI",
+		items: [
+			"OpenAI",
+			"Claude",
+			"Evals",
+			"GenAI",
+			"Agents",
+			"Multi-agent Systems",
+			"Vector Embeddings",
+			"HuggingFace",
+			"Fine-Tuning",
+			"Mistral",
+			"Ollama",
+			"Vercel AI SDK",
+		],
+	},
+	{
 		category: "Languages",
 		items: ["JavaScript", "TypeScript", "Python"],
 	},
@@ -24,22 +41,7 @@ export const skillsByCategory = [
 		category: "Backend",
 		items: ["PostgreSQL", "Neon", "Supabase", "REST", "GraphQL", "Prisma"],
 	},
-	{
-		category: "AI",
-		items: [
-			"OpenAI",
-			"Claude",
-			"Evals",
-			"Agents",
-			"Multi-agent Systems",
-			"Vector Embeddings",
-			"HuggingFace",
-			"Fine-Tuning",
-			"Mistral",
-			"Ollama",
-			"Vercel AI SDK",
-		],
-	},
+	
 	{
 		category: "Testing",
 		items: [
