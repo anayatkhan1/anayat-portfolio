@@ -8,58 +8,57 @@
 		"endDate": "Present",
 		"location": "Canada - Remote",
 		"responsibilities": [
-			"Built server-driven UI architecture from scratch for an MVP, enabling dynamic rendering of application interfaces and a scalable foundation for continued product development.",
-			"Developed authentication, admin dashboard, and organization-level dynamic theming, enabling customizable experiences across organizations."
+			"The MVP had no scalable way to render varying interfaces across use cases without hardcoding each screen. Architected a server-driven UI system from scratch, letting the backend control interface structure dynamically — reducing the need for new frontend deploys with every product change.",
+			"Each client organization needed a distinct branded experience but shared a single codebase. Built authentication, an admin dashboard, and organization-level dynamic theming, enabling multi-tenant customization without duplicating the app per client."
 		],
-		"technologies": ["Server-Driven UI", "Authentication", "Admin Dashboard", "Multi-tenancy", "Theming"]
+		"technologies": ["React", "Next.js", "Server-Driven UI", "Authentication", "Multi-tenancy", "Admin Dashboard"]
 	},
 	{
 		"id": 2,
-		"organization": "PSci Labs",
-		"role": "AI Engineer",
-		"logo": "/companies/psci.png",
-		"startDate": "May, 2025",
-		"endDate": "Nov, 2025",
-		"location": "USA - Remote",
-		"responsibilities": [
-			"Built React components to render citation context in AI-generated Word and PDF documents, improving document review speed by ~30% for client workflows.",
-			"Developed an AI agent to generate and edit PowerPoint presentations, reducing manual slide creation time by 50%",
-			"Improved chat UI by adding slash commands (e.g. /fix) and @ file include, and integrated TipTap for rich editing, delivering a smoother, more capable chat experience."
-		],
-		"technologies": ["AI", "Live Streaming", "Translation", "Analytics", "Dashboard", "UI/UX"]
-	},
-	
-	{
-		"id": 3,
 		"organization": "Vincera AI",
 		"role": "AI Engineer",
 		"logo": "/companies/vincera.png",
-		"startDate": "Jan, 2025",
-		"endDate": "May, 2025",
+		"startDate": "March, 2025",
+		"endDate": "April, 2026",
 		"location": "Romania - Remote",
 		"responsibilities": [
-			"Designed and shipped a multi-agent AI system with a director agent orchestrating sales, promotions, and executive workflows via Telegram, WhatsApp, and email.",
-			"Built AI agents for Excel sales analytics, PDF promo extraction, and Gmail/Calendar task prioritization, cutting manual reporting and follow-ups by 50%",
-			"Delivered a production-ready automation stack using n8n, Supabase, and secure APIs, with modular workflows and client handoff."
+			"Sales and executive teams were manually coordinating promotions, follow-ups, and scheduling across Telegram, WhatsApp, and email with no central system. Built an orchestrator agent that routed tasks to specialized sub-agents across all three channels for consistent, automated handling.",
+			"Sales reps were manually cross-referencing Excel reports, PDFs, and inboxes to prioritize follow-ups, costing hours weekly. Built specialized AI agents with evals and safety checks for Excel sales analytics, PDF promo extraction, and Gmail/Calendar task prioritization, cutting manual reporting and follow-up time by 65%.",
+			"The system needed to hand off cleanly to the client's team post-launch without ongoing engineering support. Delivered a production automation stack using n8n and Supabase with modular, documented workflows and secure API integrations built for client self-maintenance."
 		],
-		"technologies": ["AI", "Live Streaming", "Translation", "Analytics", "Dashboard", "UI/UX"]
+		"technologies": ["Multi-Agent Systems", "Evals", "n8n", "Supabase", "Telegram API", "Gmail API"]
+	},
+	{
+		"id": 3,
+		"organization": "PSci Labs",
+		"role": "AI Engineer (Freelance)",
+		"logo": "/companies/psci.png",
+		"startDate": "April, 2025",
+		"endDate": "November, 2025",
+		"location": "USA - Remote",
+		"responsibilities": [
+			"Clients reviewing AI-generated Word and PDF documents had no way to trace claims back to source material, slowing down verification. Built React components to render citation context inline within the documents, improving client review speed by 48%.",
+			"Creating client-facing PowerPoint decks was a manual, time-intensive process for the team. Developed an AI agent to generate and edit PowerPoint presentations end-to-end, reducing manual slide creation time significantly.",
+			"The chat interface lacked quick actions and rich formatting, slowing down how users interacted with the AI. Enhanced the chat UI with slash commands (e.g. /fix), @-file includes, and TipTap-based rich text editing for a faster, more capable interaction flow.",
+			"Dashboard visualizations lacked validation before shipping to clients. Delivered agentic dashboard visualizations with evals, improving system reliability and user experience."
+		],
+		"technologies": ["React", "TipTap", "AI Agents", "Evals", "Document Generation", "Chat UI"]
 	},
 	{
 		"id": 4,
 		"organization": "Kingdom Global Ventures",
 		"role": "Full Stack Engineer",
 		"logo": "/companies/venture.png",
-		"startDate": "Oct, 2024",
-		"endDate": "March, 2026",
+		"startDate": "October, 2024",
+		"endDate": "March, 2025",
 		"location": "Canada - Remote",
 		"responsibilities": [
-			"Engineered event platform with AI live-streaming, 100+ language translation, serving 10K+ users",
-			"Launched AI-powered notes/highlights boosting user session duration by 25% via live-caption interactivity",
-			"Built scalable dashboard & UI/UX for event analytics, slashing onboarding time by 40% for enterprises"
+			"Live events had no way to reach non-English-speaking attendees in real time, limiting audience reach. Engineered a live-event platform with AI-powered streaming and real-time translation across 100+ languages.",
+			"Viewers struggled to retain key moments from long live sessions, reducing engagement. Launched AI-generated notes and highlights sourced from live captions, increasing user session duration by 25%.",
+			"Enterprise clients faced a steep learning curve analyzing event performance data. Built a scalable analytics dashboard for event organizers, cutting enterprise client onboarding time by 40%."
 		],
-		"technologies": ["AI", "Live Streaming", "Translation", "Analytics", "Dashboard", "UI/UX"]
+		"technologies": ["AI", "Live Streaming", "Real-time Translation", "Analytics Dashboard", "React"]
 	},
-
 	{
 		"id": 5,
 		"organization": "Memorang",
@@ -69,9 +68,9 @@
 		"endDate": "Sep, 2024",
 		"location": "USA - Remote",
 		"responsibilities": [
-			"Refactored UI components to enhance user experience, resulting in a 25% increase in user satisfaction",
-			"Collaborated with cross-functional teams to leverage Supabase AI vector embedding for improved search accuracy by 30%",
-			"Designed and implemented a REST API using Prisma, resulting in a 56% increase in deployment speed"
+			"Refactored UI components to enhance user experience, resulting in a 25% increase in user satisfaction.",
+			"Collaborated with cross-functional teams to leverage Supabase AI vector embeddings, improving search accuracy by 30%.",
+			"Designed and implemented a REST API using Prisma, increasing deployment speed by 56%."
 		],
 		"technologies": ["React", "Supabase", "Prisma", "REST API", "AI", "Vector Embeddings"]
 	},
@@ -84,9 +83,9 @@
 		"endDate": "Jan, 2024",
 		"location": "USA - Remote",
 		"responsibilities": [
-			"Developed 9+ reusable React components, enhancing UI efficiency by 30% and reducing development time",
-			"Crafted pixel-perfect UIs across features, ensuring 100% brand compliance and enhancing UX",
-			"Achieved 95% code coverage through Test-Driven Development (TDD), reducing post-release bugs by 40%"
+			"Developed 9+ reusable React components, enhancing UI efficiency by 30% and reducing development time.",
+			"Crafted pixel-perfect UIs across features, ensuring 100% brand compliance and enhancing UX.",
+			"Achieved 95% code coverage through Test-Driven Development (TDD), reducing post-release bugs by 40%."
 		],
 		"technologies": ["React", "TDD", "Testing", "UI Components", "UX Design"]
 	}
